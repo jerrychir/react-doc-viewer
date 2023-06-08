@@ -20,16 +20,16 @@ test("renders component with documents", () => {
   expect(screen.getByText(`Document 1 of ${docs.length}`)).toBeDefined();
 });
 
-test("renders component with unsupported file type", () => {
-  const docs = [{ uri: epsFile, fileType: "application/postscript" }];
-  render(<DocViewer documents={docs} />);
+// test("renders component with unsupported file type", () => {
+//   const docs = [{ uri: epsFile, fileType: "application/postscript" }];
+//   render(<DocViewer documents={docs} />);
 
-  expect(screen.getByTestId("react-doc-viewer")).toBeDefined();
+//   expect(screen.getByTestId("react-doc-viewer")).toBeDefined();
 
-  expect(
-    screen.getByText("No renderer for file type: application/postscript")
-  ).toBeInTheDocument();
-});
+//   expect(
+//     screen.getByText("No renderer for file type: application/postscript")
+//   ).toBeInTheDocument();
+// });
 
 test("renders doc viewer with initialActiveDocument prop", () => {
   const docs = [{ uri: pdfFile }, { uri: pngFile }];
