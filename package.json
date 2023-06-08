@@ -12,6 +12,10 @@
   "repository": {
     "url": "https://github.com/jerrychir/react-doc-viewer"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "files": [
     "dist/**"
   ],
