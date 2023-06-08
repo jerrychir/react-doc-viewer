@@ -88,6 +88,15 @@ const DocViewerProvider = forwardRef<
       next() {
         dispatch(nextDocument());
       },
+      // jumpToPage(num:number){
+      //   // dispatch(setCurrentPage(1));
+      // },
+      // prevPage() {
+          
+      // },
+      // nextPage() {
+          
+      // },
     }),
     [dispatch]
   );

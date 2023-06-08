@@ -133,3 +133,15 @@ export const NoRenderType = () => {
         />
     );
 };
+
+export const RenderPdfType = () => {
+
+    return (
+        <DocViewer
+            documents={docs}
+            initialActiveDocument={docs[3]}
+            pluginRenderers={DocViewerRenderers}
+
+        />
+    );
+};

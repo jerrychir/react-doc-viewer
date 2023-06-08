@@ -32,9 +32,10 @@ const PDFControls: FC<{}> = () => {
 
   return (
     <Container id="pdf-controls">
-      {paginated && numPages > 1 && <PDFPagination />}
+      {/*{paginated && numPages > 1 && <PDFPagination />}*/}
+      {/*{numPages > 1 && <PDFPagination />}*/}
 
-      {currentDocument?.fileData && (
+      {/*{currentDocument?.fileData && (
         <DownloadButton
           id="pdf-download"
           href={currentDocument?.fileData as string}
@@ -43,7 +44,7 @@ const PDFControls: FC<{}> = () => {
         >
           <DownloadPDFIcon color="#000" size="75%" />
         </DownloadButton>
-      )}
+      )}*/}
 
       <ControlButton
         id="pdf-zoom-out"
@@ -59,15 +60,15 @@ const PDFControls: FC<{}> = () => {
         <ZoomInPDFIcon color="#000" size="80%" />
       </ControlButton>
 
-      <ControlButton
+      {/*<ControlButton
         id="pdf-zoom-reset"
         onMouseDown={() => dispatch(setZoomLevel(defaultZoomLevel))}
         disabled={zoomLevel === defaultZoomLevel}
       >
         <ResetZoomPDFIcon color="#000" size="70%" />
-      </ControlButton>
+      </ControlButton>*/}
 
-      {numPages > 1 && (
+      {/*{numPages > 1 && (
         <ControlButton
           id="pdf-toggle-pagination"
           onMouseDown={() => dispatch(setPDFPaginated(!paginated))}
@@ -78,7 +79,7 @@ const PDFControls: FC<{}> = () => {
             reverse={paginated}
           />
         </ControlButton>
-      )}
+      )}*/}
     </Container>
   );
 };

@@ -29,6 +29,7 @@ export interface INoRendererConfig {
 
 export interface IHeaderConfig {
   disableHeader?: boolean;
+  disableControls?: boolean;
   disableFileName?: boolean;
   retainURLParams?: boolean;
   overrideComponent?: IHeaderOverride;
@@ -79,4 +80,7 @@ export interface DocRenderer extends FC<PropsWithChildren<DocRendererProps>> {
 export interface DocViewerRef {
   prev: () => void;
   next: () => void;
+  // jumpToPage:(num:number)=>void;
+  // prevPage: () => void;
+  // nextPage: () => void;
 }

@@ -39,6 +39,7 @@ const DocumentPDF = styled(Document)`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  background-color: #f8f9fa;
 `;
 
 export default PDFPages;

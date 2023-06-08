@@ -36,6 +36,7 @@
     "release": "npm run test && npm run build && release-it && npm run deploy"
   },
   "dependencies": {
+    "@tabler/icons-react": "^2.22.0",
     "@types/mustache": "^4.2.2",
     "@types/papaparse": "^5.3.5",
     "mustache": "^4.2.0",

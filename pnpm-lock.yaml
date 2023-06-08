@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@tabler/icons-react':
+    specifier: ^2.22.0
+    version: 2.22.0(react@18.2.0)
   '@types/mustache':
     specifier: ^4.2.2
     version: 4.2.2
@@ -4682,6 +4685,20 @@ packages:
     dependencies:
       defer-to-connect: 2.0.1
     dev: true
+
+  /@tabler/icons-react@2.22.0(react@18.2.0):
+    resolution: {integrity: sha512-9udRxrbsbWzUETur4jmbZQIZkH7jVA2GU7YnKYS7ZCUjdOHZZEhmsfJ/Gdbzz0gSRC3mU7SDMsKejun/IBjvpQ==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@tabler/icons': 2.22.0
+      prop-types: 15.8.1
+      react: 18.2.0
+    dev: false
+
+  /@tabler/icons@2.22.0:
+    resolution: {integrity: sha512-lOsGHqRPIKNARMWHHFkUUJH78C8ptQmUcDnumFBUI4YLRKFouKa7uAZL3ZfuH0HjDpOhsnWqUYZ7FhMCLcGpAQ==}
+    dev: false
 
   /@testing-library/dom@8.20.0:
     resolution: {integrity: sha512-d9ULIT+a4EXLX3UU8FBjauG9NnsZHkHztXoIcTsOKoOw030fyjheN9svkTULjJxtYag9DZz5Jz5qkWZDPxTFwA==}

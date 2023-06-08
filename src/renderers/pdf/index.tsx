@@ -10,10 +10,11 @@ import { PDFProvider } from "./state";
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
 
 const PDFRenderer: DocRenderer = ({ mainState }) => {
+
   return (
     <PDFProvider mainState={mainState}>
       <Container id="pdf-renderer" data-testid="pdf-renderer">
-        <PDFControls />
+        {!mainState.config?.header?.disableControls && <PDFControls />}
         <PDFPages />
       </Container>
     </PDFProvider>
@@ -30,6 +31,7 @@ const Container = styled.div`
   flex-direction: column;
   flex: 1;
   overflow-y: auto;
+  background-color: #f8f9fa;
 
   /* width */
   &::-webkit-scrollbar {
