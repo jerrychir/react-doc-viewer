@@ -51,7 +51,6 @@ export const Default = () => (
         defaultZoom: 1.1,
         zoomJump: 0.2,
       },
-      pdfVerticalScrollByDefault: true,
     }}
     language="pl"
   />
