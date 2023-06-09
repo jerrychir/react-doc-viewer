@@ -26,6 +26,7 @@ export const Default = () => (
     documents={docs}
     initialActiveDocument={docs[1]}
     config={{
+      pdfVerticalScrollByDefault: true,
       noRenderer: {
         overrideComponent: ({ document, fileName }) => {
           const fileText = fileName || document?.fileType || "";
@@ -76,6 +77,7 @@ export const WithPDFInput = () => {
           fileName: file.name,
         }))}
         pluginRenderers={DocViewerRenderers}
+        config={{pdfVerticalScrollByDefault: true }}
       />
     </>
   );
@@ -94,6 +96,7 @@ export const ManualNextPrevNavigation = () => {
         documents={docs}
         activeDocument={activeDocument}
         onDocumentChange={handleDocumentChange}
+        config={{pdfVerticalScrollByDefault: true }}
       />
     </>
   );
@@ -115,7 +118,7 @@ export const WithRef = () => {
       <DocViewer
         ref={docViewerRef}
         documents={docs}
-        config={{ header: { disableHeader: true } }}
+        config={{pdfVerticalScrollByDefault: true, header: { disableHeader: true } }}
       />
     </>
   );
@@ -130,6 +133,7 @@ export const NoRenderType = () => {
             initialActiveDocument={docs[0]}
             pluginRenderers={DocViewerRenderers}
             language="en"
+            config={{pdfVerticalScrollByDefault: true }}
         />
     );
 };
@@ -141,7 +145,10 @@ export const RenderPdfType = () => {
             documents={docs}
             initialActiveDocument={docs[3]}
             pluginRenderers={DocViewerRenderers}
-
+            config={{pdfVerticalScrollByDefault: true,pdfZoom: {
+              defaultZoom: 0.5, 
+              zoomJump: 0.2, 
+            }, }}
         />
     );
 };
